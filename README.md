@@ -1,4 +1,4 @@
-# jupyter lab のコンテナイメージ
+# jupyter lab のDockerfile
 
 ### 初期設定 (ubuntu 18.04)
 ##### docker インストール

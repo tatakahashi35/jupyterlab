@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  jupyterlab:
+    build: .
+    container_name: jupyterlab
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      # - AWS_ACCESS_KEY_ID=XXX
+      # - AWS_SECRET_ACCESS_KEY=XXX
+    ports:
+      - "8888:8888"
+    volumes:
+      - /path/to/notebook:/home/jovyan/jupyterlab # ノートブック用ディレクトリ
+      - /path/to/data:/home/jovyan/data # データ用ディレクトリ
+    command: start.sh jupyter lab --NotebookApp.token="" # トークンなし
